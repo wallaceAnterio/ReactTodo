@@ -1,0 +1,29 @@
+:root {
+   --background: #181820;
+   --background-light: #21212b;
+
+   --primary: #ffffff;
+   --secondary: #f95738;
+   --terciary: #bbbbbb;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   outline: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: var(--background);
+}
+body,
+input,
+button {
+   color: var(--primary);
+   font: 400 16px "Fredoka", sans-serif;
+}
+
+button:hover{
+   cursor: pointer;
+}

@@ -1,10 +1,14 @@
 import { useState } from 'react'
-import './App.css'
+
+import styles from './styles/app.module.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
+    <div className={styles.container}>
+      <div className={styles.content}>
+      <h1>TODOLIST</h1>
+
+      </div>
     </div>
   )
 }
