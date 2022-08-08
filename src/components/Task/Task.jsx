@@ -1,0 +1,29 @@
+import React from "react";
+import { FaTrashAlt } from "react-icons/fa";
+
+import styles from "./task.module.css";
+
+function Task({ id, name, completed, onRemove, onChangeCompleted }) {
+   return (
+      <li className={`${styles.task} ${completed ? styles.completed : ""}`}>
+         <input
+            type="checkbox"
+            checked={completed}
+            className={styles.task__checkbox}
+            onChange={() => onChangeCompleted(id)}
+         />
+
+         <span className={styles.task__name}>{name}</span>
+
+         <button
+            type="button"
+            className={styles.task__button}
+            onClick={() => onRemove(id)}
+         >
+            <FaTrashAlt size={16} />
+         </button>
+      </li>
+   );
+}
+
+export default Task;
