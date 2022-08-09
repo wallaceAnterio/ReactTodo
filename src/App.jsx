@@ -70,7 +70,7 @@ export function App() {
                type="text"
                value={searchTaskName}
                onChange={handleTermSearch}
-               placeholder="pesquisar tarefa"
+               placeholder="Pesquisar tarefa"
             />
 
             <Tasks
