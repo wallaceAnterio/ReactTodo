@@ -23,6 +23,7 @@
    flex-direction: column;
    align-items: flex-end;
    row-gap: 6px;
+   margin-bottom: 2rem;
 }
 
 .footer h6 {
