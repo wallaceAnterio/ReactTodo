@@ -10,10 +10,10 @@
 }
 
 
-.task__completed{
-   opacity: 0.6;
+.task.completed{
+   opacity: 0.5;
 }
-.task__completed span{
+.task.completed span{
    text-decoration: line-through;
 }
 

@@ -3,19 +3,29 @@ import { FaPlus } from "react-icons/fa";
 
 import { Input } from "../Input/Input";
 import styles from "../Form/form.module.css";
+import { v4 as uuid } from "uuid";
 
-function Form({ onSubmit }) {
+export function Form({ onSubmit }) {
    const [taskName, setTaskName] = useState("");
 
    const handleSubmit = (event) => {
       event.preventDefault();
-      console.log(event);
+      if (!!taskName) {
+         const newTask = {
+            id: uuid(),
+            name: taskName,
+            completed: false,
+         };
+         onSubmit(newTask);
+         setTaskName("");
+      }
    };
+
    return (
       <form className={styles.form} onSubmit={handleSubmit}>
          <Input
             type="text"
-            defaultValue=''
+            value={taskName}
             placeholder="Nome da tarefa"
             onChange={(event) => setTaskName(event.target.value)}
          />
@@ -30,5 +40,3 @@ function Form({ onSubmit }) {
       </form>
    );
 }
-
-export default Form;
