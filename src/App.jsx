@@ -62,7 +62,7 @@ export function App() {
    return (
       <div className={styles.container}>
          <div className={styles.content}>
-            <h1>TODOLIST</h1>
+            <h1>Qual é o plano para hoje?</h1>
             <Form onSubmit={onAddTask} />
             <hr />
 
